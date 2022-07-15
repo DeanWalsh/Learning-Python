@@ -54,9 +54,9 @@ while True:
         print("You lose!")
         computer_wins += 1
 
-    print("Player: " + str(player_wins))
-    print("Computer: " + str(computer_wins))
-    
+    print(f"Player: {player_wins}")
+    print(f"Computer: {computer_wins}")
+
     print("")
     print("Type 'q' to quit, or anything else to play again.")
 
