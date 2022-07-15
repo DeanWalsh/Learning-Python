@@ -18,11 +18,14 @@ import random
 player_wins = 0
 computer_wins = 0
 
-print("Welcome to Rock, Paper, Scissors!")
+lose = "You lose! \n"
+win = "You win! \n"
+
+print("Welcome to Rock, Paper, Scissors! \n")
 
 while True:
 
-    print("Type 'r' for rock, 'p' for paper, or 's' for scissors.")
+    print("Type 'r' for rock, 'p' for paper, or 's' for scissors. \n")
 
     choice = input()
     if choice == "r":
@@ -34,31 +37,30 @@ while True:
     computer_choice = random.randint(1, 3)
 
     if player_choice == computer_choice:
-        print("It's a tie!")
+        print("It's a tie! \n")
     elif player_choice == 1 and computer_choice == 3:
-        print("You win!")
+        print(win)
         player_wins += 1
     elif player_choice == 2 and computer_choice == 1:
-        print("You win!")
+        print(win)
         player_wins += 1
     elif player_choice == 3 and computer_choice == 2:
-        print("You win!")
+        print(win)
         player_wins += 1
     elif player_choice == 1 and computer_choice == 2:
-        print("You lose!")
+        print(lose)
         computer_wins += 1
     elif player_choice == 2 and computer_choice == 3:
-        print("You lose!")
+        print(lose)
         computer_wins += 1
     elif player_choice == 3 and computer_choice == 1:
-        print("You lose!")
+        print(lose)
         computer_wins += 1
 
     print(f"Player: {player_wins}")
-    print(f"Computer: {computer_wins}")
+    print(f"Computer: {computer_wins} \n")
 
-    print("")
-    print("Type 'q' to quit, or anything else to play again.")
+    print("Type 'q' to quit, or anything else to play again. \n")
 
     answer = input()
     if answer == "q":
