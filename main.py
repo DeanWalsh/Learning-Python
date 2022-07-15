@@ -10,6 +10,8 @@
 # The player will guess the number.
 # If the player guesses the number, tell the player that he guessed the number.
 
+# Try 
+
 import random
 
 def the_game():
@@ -22,28 +24,24 @@ def the_game():
         print("You didn't guess the number :(")
         print("The number was " + str(number))
         
-    print("Do you want to play again?")
-    answer = input()
-    if answer == "yes" or "Yes" or "YES" or "y" or "Y":
-        the_game()
-    else:
-        print("Thanks for playing!")
-        exit()
 
 print("Welcome to the game!")
-print("Type yes if you want to play, no if you don't.")
-answer = input()
-if answer == "yes" or "Yes" or "YES" or "y" or "Y":
-    print("Type your name.")
-    name = input()
-    print("Hello, " + name + "!")
-    print("I will pick a number between 1 and 10.")
-    print("You will have to guess it.")
-    print("If you guess the number, I will tell you that you guessed the number.")
-    print("If you don't guess the number, I will tell you that you didn't guess the number.")
-    the_game()
-else:
-    print("Goodbye!")
-    exit()
+while True:
+    print("Type yes if you want to play, no if you don't.")
+    answer = input()
+    answers = ["y", "yes"]
+    if answer in answers:
+        print("Type your name.")
+        name = input()
+        print("Hello, " + name + "!")
+        print("I will pick a number between 1 and 10.")
+        print("You will have to guess it.")
+        print("If you guess the number, I will tell you that you guessed the number.")
+        print("If you don't guess the number, I will tell you that you didn't guess the number.")
+        the_game()
+    else:
+        print("Goodbye!")
+        exit()
+
 
             
