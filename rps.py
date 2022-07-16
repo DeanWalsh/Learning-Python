@@ -34,6 +34,9 @@ while True:
         player_choice = 2
     elif choice == "s":
         player_choice = 3
+    else:
+        print("Invalid input. \n")
+        continue
     computer_choice = random.randint(1, 3)
 
     if player_choice == computer_choice:
