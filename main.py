@@ -16,28 +16,28 @@ import random
 
 def the_game():
     number = random.randint(1, 10)
-    print("Guess the number.")
+    print("Guess the number.\n")
     guess = int(input())
     if guess == number:
-        print("You guessed the number!")
+        print("You guessed the number!\n")
     else:
         print("You didn't guess the number :(")
-        print("The number was " + str(number))
+        print(f"The number was {number}\n")
         
 
-print("Welcome to the game!")
+print("Welcome to the game!\n")
+print("Type your name.")
+name = input()
+print()
+print(f"Hello, {name}" +  "!\n")
+
 while True:
-    print("Type yes if you want to play, no if you don't.")
+    print("Type yes if you want to play, no if you don't. \n")
     answer = input()
     answers = ["y", "yes"]
+    print()
     if answer in answers:
-        print("Type your name.")
-        name = input()
-        print("Hello, " + name + "!")
-        print("I will pick a number between 1 and 10.")
-        print("You will have to guess it.")
-        print("If you guess the number, I will tell you that you guessed the number.")
-        print("If you don't guess the number, I will tell you that you didn't guess the number.")
+        print("Guess a number between 1 and 10.\n")
         the_game()
     else:
         print("Goodbye!")
